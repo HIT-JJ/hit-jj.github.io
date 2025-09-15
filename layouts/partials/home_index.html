@@ -1,0 +1,19 @@
+
+{{/*
+jQuery轮播效果（Carousell）
+注意 prev nextl 两个button的href id 和 setction id要一致
+https://blog.csdn.net/chenmo2001/article/details/117674446
+*/}}
+{{ $heroBlock := .Params.heroBlock }}
+{{ $slider_hash_id := "hero_sliders" }}
+{{ $slider_args := dict "wcPage" $ "wcBlock" .Params.heroSlideBlock "wcIdentifier" $slider_hash_id }}
+<section id="section-hero" class="home-section wg-hero">
+  <div class="container">
+
+    <h1 class="hero-title" >{{ $heroBlock.content.title }}</h1>
+    <div>{{ .Content }}</div>
+
+
+  </div>
+</section>
+
