@@ -1,0 +1,69 @@
+{{- define "main" -}}
+
+{{$top_image := "images/design/home_top_image.jpg"}}
+{{- if .Params.top_image -}}
+  {{- $top_image = .Params.top_image -}}
+{{- end -}}
+
+{{- $table_columns := .Params.table_columns  -}}
+
+
+{{- $data := site.Data.achievement -}}
+{{- $table_data := index $data .Params.data_key -}}
+
+<section id="section-hero" class="home-section wg-hero achievements-page">
+
+    {{/* 头部图片 */}}
+  <div class="site-header-container has-cover" style='background-image: url({{ $top_image | relURL}});'>
+    <div class="scrim has-cover">
+      <div class="site-header">
+        <h1 class="title">{{ .Title }}</h1>
+        <p class="subtitle">{{ .Params.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+
+    <div class="achievements-desc">{{ .Content }}</div>
+
+    <div class="table-data">
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th>序号</th>
+          {{- range  $index, $item := $table_columns -}}
+          <th>{{$item}}</th>
+          {{ end }}
+          <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{- range  $index, $item := $table_data -}}
+          <tr>
+            <td>{{add 1 $index}}</td>
+
+            {{- range  $index2, $column := $table_columns -}}
+            <td>{{ (index $item $column) |  markdownify | emojify }}</td>
+            {{ end }}
+
+            <td >
+              {{ with $item.file }}
+              <a href="{{ . | relURL }}">查看详情</a>
+              {{ end }}
+            </td>
+          </tr>
+        {{- end -}}
+        </tbody>
+      </table>
+
+
+
+    </div>
+
+  </div>
+</section>
+
+{{- end -}}

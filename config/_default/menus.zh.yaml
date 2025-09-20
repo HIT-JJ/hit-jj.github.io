@@ -9,31 +9,31 @@ main:
     url: ""
     weight: 20
 
-  - name: 成果相关研究项目
-    url: software
+  - name: 成果相关奖励
+    url: jiang-li
     weight: 30
 
+  - name: 成果相关研究项目
+    url: xiang-mu
+    weight: 40
 
-  - name: 成果奖励
-    url: software
+  - name: 荣誉称号
+    url: cheng-hao
     weight: 50
 
   - name: 成果相关教材与专著
-    url: software
+    url: jiao-cai
     weight: 60
 
   - name: 成果相关论文
-    url: software
+    url: lun-wen
     weight: 90
 
   - name: 成果相关平台
     url: software
-    weight: 90
+    weight: 100
 
-  - name: 荣誉称号
-    url: software
-    weight: 90
 
   - name: 本科生科创成果
     url: software
-    weight: 90
+    weight: 110

@@ -1,6 +1,14 @@
 // Override this file to add your own SCSS styling.
 
 
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1400px;
+  }
+}
+
+
+
 .site-header-container {
   color: #fff;
   text-shadow: 0 2px 1px rgba(0, 0, 0, 0.67) !important;
@@ -23,6 +31,22 @@
 }
 
 
+
+
+
+.achievements-page {
+  .table-data {
+    margin: 5rem 0;
+    table {
+      border-collapse: collapse;
+      th, td {
+        padding: .75rem;
+        vertical-align: top;
+        border: 1px solid #dee2e6;
+      }
+    }
+  }
+}
 
 
 @media (max-width: 478px) {
