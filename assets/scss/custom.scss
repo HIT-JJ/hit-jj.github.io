@@ -3,11 +3,32 @@
 
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1400px;
+    max-width: 1500px;
   }
 }
 
 
+.navbar {
+  //background: #11539e;
+}
+#navbar-main .main-menu-item ul li .nav-link{
+  //color: #fff;
+}
+#navbar-main .main-menu-item ul li .nav-link:before {
+  content: "|";
+  padding-right: 1rem;
+}
+#navbar-main .main-menu-item ul   {
+  li.nav-item:first-child {
+    .nav-link:before  {
+      display: none;
+    }
+  }
+}
+
+.home-section:first-of-type {
+  padding-top: 1px;
+}
 
 .site-header-container {
   color: #fff;
