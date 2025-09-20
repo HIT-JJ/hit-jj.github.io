@@ -30,10 +30,10 @@ main:
     weight: 90
 
   - name: 成果相关平台
-    url: software
+    url: ping-tai
     weight: 100
 
 
   - name: 本科生科创成果
-    url: software
+    url: cheng-guo
     weight: 110
